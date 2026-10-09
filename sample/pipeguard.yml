@@ -1,0 +1,24 @@
+schema:
+  order_id: integer
+  customer_id: integer
+  amount: float
+  created_at: string
+nulls:
+  max_pct: 5.0
+  columns: {}
+duplicates:
+  keys: [order_id]
+outliers:
+  iqr_k: 1.5
+  max_pct: 1.0
+dates:
+  columns: [created_at]
+foreign_keys:
+  - column: customer_id
+    ref_file: customers.csv
+    ref_column: id
+row_count:
+  tolerance_pct: 10
+freshness:
+  column: created_at
+  max_age_hours: 24

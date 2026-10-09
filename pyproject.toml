@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pipeguard"
+version = "0.1.0"
+description = "Data quality CLI with HTML reports"
+requires-python = ">=3.9"
+dependencies = ["pandas>=2.0", "pyyaml>=6.0"]
+
+[project.optional-dependencies]
+parquet = ["pyarrow"]
+
+[project.scripts]
+pipeguard = "pipeguard.cli:main"
+
+[tool.setuptools]
+packages = ["pipeguard"]

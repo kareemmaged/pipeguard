@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PipeGuard report · salaries.csv</title><style>
+:root{
+  --bg:#000000;
+  --panel:#52057B;
+  --row:#BC6FF1;
+  --ink:#000000;
+  --text:#ffffff;
+  --text-muted:#d3b8f5;
+  --pass:#892CDC;
+  --warn:#BC6FF1;
+  --fail:#52057B;
+  --skip:#3b0359;
+  --u:clamp(.6px,calc(100vw / 1920),1px);
+}
+*{box-sizing:border-box}
+html{background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--text);
+font:calc(18*var(--u))/1.5 Inter,"Segoe UI",system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+nav{border-bottom:calc(3*var(--u)) solid var(--pass);background:var(--bg)}
+.in,.wrap{width:min(calc(1348*var(--u)),calc(100vw - 36px));margin:0 auto}
+.in{height:calc(101*var(--u));display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:calc(34*var(--u));font-weight:800;letter-spacing:-.05em;line-height:1;color:#fff}.logo b{color:var(--pass);font-weight:800}
+.file{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:calc(16*var(--u));border:calc(3*var(--u)) solid var(--pass);border-radius:calc(14*var(--u));padding:calc(14*var(--u));color:#fff;background:var(--pass)}
+.wrap{padding-bottom:calc(60*var(--u))}
+.hero{position:relative;text-align:center;padding:calc(66*var(--u)) 0 calc(62*var(--u))}
+h1{margin:0;font-size:calc(100*var(--u));line-height:1.02;font-weight:800;letter-spacing:-.055em;color:#fff}
+.sub{margin:calc(24*var(--u)) 0 0;font-size:calc(22*var(--u));color:var(--text-muted)}
+.star{position:absolute;overflow:visible}
+.s1{left:calc(-29*var(--u));top:calc(43*var(--u));width:calc(80*var(--u));height:calc(80*var(--u))}
+.s1b{left:calc(73*var(--u));top:calc(20*var(--u));width:calc(30*var(--u));height:calc(30*var(--u))}
+.s2{right:calc(-15*var(--u));top:calc(156*var(--u));width:calc(72*var(--u));height:calc(72*var(--u))}
+.panel{background:var(--panel);border:calc(3*var(--u)) solid var(--pass);border-radius:calc(24*var(--u));
+box-shadow:calc(13*var(--u)) calc(13*var(--u)) 0 #000;padding:calc(38*var(--u))}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:calc(22*var(--u));margin-bottom:calc(36*var(--u))}
+.card{border:calc(3*var(--u)) solid var(--ink);border-radius:calc(14*var(--u));box-shadow:calc(7*var(--u)) calc(7*var(--u)) 0 var(--ink);
+padding:calc(14*var(--u)) calc(22*var(--u)) calc(16*var(--u));min-height:calc(110*var(--u));color:#fff}
+.card b{display:block;font-size:calc(44*var(--u));line-height:1.2;font-weight:800}
+.card span{display:block;font-size:calc(19*var(--u));margin-top:calc(8*var(--u))}
+.card.pass{background:var(--pass)}.card.warn{background:var(--warn);color:var(--ink)}.card.fail{background:var(--fail)}.card.skip{background:var(--skip)}
+.row{border:calc(3*var(--u)) solid var(--ink);border-radius:calc(16*var(--u));box-shadow:calc(6*var(--u)) calc(6*var(--u)) 0 var(--ink);
+margin:0 calc(6*var(--u)) calc(26*var(--u)) 0;background:var(--row);color:var(--ink);overflow:hidden}
+.row>summary,.row>.head{display:flex;align-items:center;height:calc(72*var(--u));padding:0 calc(22*var(--u));list-style:none}
+.row>summary{cursor:pointer}.row>summary::-webkit-details-marker{display:none}
+.row>summary::after{content:"\2b";margin-left:auto;font-weight:800;font-size:calc(26*var(--u));line-height:1}
+.row[open]>summary::after{content:"\2013"}
+.badge{flex:none;width:calc(104*var(--u));text-align:center;font-size:calc(17*var(--u));font-weight:800;line-height:calc(32*var(--u));
+border:calc(3*var(--u)) solid var(--ink);border-radius:999px;box-shadow:calc(3*var(--u)) calc(3*var(--u)) 0 var(--ink);margin-right:calc(18*var(--u));color:#fff}
+.pass .badge{background:var(--pass)}.warn .badge{background:var(--warn);color:var(--ink)}.fail .badge{background:var(--fail)}.skip .badge{background:var(--skip)}
+.name{flex:none;width:calc(267*var(--u));font-weight:800;font-size:calc(20*var(--u))}
+.sum{flex:1;color:#2a0040;font-size:calc(20*var(--u))}
+ul{margin:0;padding:calc(22*var(--u)) calc(22*var(--u)) calc(22*var(--u)) calc(44*var(--u));border-top:calc(3*var(--u)) solid var(--ink);
+background:#e9cbfb;color:var(--ink);font-size:calc(17*var(--u));overflow-x:auto}
+li{margin:calc(3*var(--u)) 0;line-height:1.55;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+.panel>:last-child{margin-bottom:0}
+@media(max-width:520px){.cards{grid-template-columns:repeat(2,1fr)}.sum{display:none}.name{width:auto;flex:1}}
+</style></head>
+<body>
+<nav><div class="in"><span class="logo">Pipe<b>Guard</b></span><span class="file">salaries.csv</span></div></nav>
+<div class="wrap">
+<section class="hero"><svg class="star s1" viewBox="0 0 100 100" aria-hidden="true"><path d="M50 3C54 34 66 46 97 50C66 54 54 66 50 97C46 66 34 54 3 50C34 46 46 34 50 3Z" fill="#892CDC" stroke="#000000" stroke-width="3.5" stroke-linejoin="round"/></svg><svg class="star s1b" viewBox="0 0 100 100" aria-hidden="true"><path d="M50 3C54 34 66 46 97 50C66 54 54 66 50 97C46 66 34 54 3 50C34 46 46 34 50 3Z" fill="#BC6FF1" stroke="#000000" stroke-width="3.5" stroke-linejoin="round"/></svg><svg class="star s2" viewBox="0 0 100 100" aria-hidden="true"><path d="M50 3C54 34 66 46 97 50C66 54 54 66 50 97C46 66 34 54 3 50C34 46 46 34 50 3Z" fill="#892CDC" stroke="#000000" stroke-width="3.5" stroke-linejoin="round"/></svg><h1>Data quality report</h1>
+<p class="sub">16,534 rows × 11 columns · checked</p></section>
+<section class="panel">
+<div class="cards"><div class="card pass"><b>1</b><span>Passed</span></div><div class="card warn"><b>1</b><span>Warning</span></div><div class="card fail"><b>5</b><span>Failed</span></div><div class="card skip"><b>1</b><span>Skipped</span></div></div>
+<details class="row fail"><summary><span class="badge">Failed</span><span class="name">Schema validation</span><span class="sum">5 schema problem(s)</span></summary><ul><li>Missing column: order_id</li><li>Missing column: customer_id</li><li>Missing column: amount</li><li>Missing column: created_at</li><li>Unexpected columns: work_year, experience_level, employment_type, job_title, salary, salary_currency, salary_in_usd, employee_residence, remote_ratio, company_location, company_size</li></ul></details><div class="row pass"><div class="head"><span class="badge">Passed</span><span class="name">Null checks</span><span class="sum">No column above null limit (5.0% default)</span></div></div><div class="row fail"><div class="head"><span class="badge">Failed</span><span class="name">Duplicate detection</span><span class="sum">Key column(s) not found: order_id</span></div></div><details class="row warn"><summary><span class="badge">Warning</span><span class="name">Outlier detection</span><span class="sum">3 column(s) with outliers</span></summary><ul><li>work_year: 293 outlier(s) (1.8%), expected range [2021.50, 2025.50]</li><li>salary: 345 outlier(s) (2.1%), expected range [-26392.50, 315355.50]</li><li>salary_in_usd: 283 outlier(s) (1.7%), expected range [-26037.50, 313062.50]</li></ul></details><details class="row fail"><summary><span class="badge">Failed</span><span class="name">Invalid date detection</span><span class="sum">1 date column(s) with invalid values</span></summary><ul><li>created_at: column not found</li></ul></details><div class="row fail"><div class="head"><span class="badge">Failed</span><span class="name">Referential integrity</span><span class="sum">Check crashed: KeyError: &#x27;customer_id&#x27;</span></div></div><div class="row skip"><div class="head"><span class="badge">Skipped</span><span class="name">Row count comparison</span><span class="sum">16534 rows. No baseline yet; this run becomes the baseline for next time</span></div></div><div class="row fail"><div class="head"><span class="badge">Failed</span><span class="name">Data freshness</span><span class="sum">Freshness column not found: created_at</span></div></div>
+</section>
+</div></body></html>

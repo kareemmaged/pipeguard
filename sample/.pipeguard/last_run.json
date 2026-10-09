@@ -1,0 +1,69 @@
+{
+  "file": "C:\\Users\\Kareem\\Downloads\\pipeguard\\sample\\salaries.csv",
+  "name": "salaries.csv",
+  "checked_at": "2026-10-09T16:26:54+00:00",
+  "rows": 16534,
+  "columns": 11,
+  "results": [
+    {
+      "name": "Schema validation",
+      "status": "fail",
+      "summary": "5 schema problem(s)",
+      "details": [
+        "Missing column: order_id",
+        "Missing column: customer_id",
+        "Missing column: amount",
+        "Missing column: created_at",
+        "Unexpected columns: work_year, experience_level, employment_type, job_title, salary, salary_currency, salary_in_usd, employee_residence, remote_ratio, company_location, company_size"
+      ]
+    },
+    {
+      "name": "Null checks",
+      "status": "pass",
+      "summary": "No column above null limit (5.0% default)",
+      "details": []
+    },
+    {
+      "name": "Duplicate detection",
+      "status": "fail",
+      "summary": "Key column(s) not found: order_id",
+      "details": []
+    },
+    {
+      "name": "Outlier detection",
+      "status": "warn",
+      "summary": "3 column(s) with outliers",
+      "details": [
+        "work_year: 293 outlier(s) (1.8%), expected range [2021.50, 2025.50]",
+        "salary: 345 outlier(s) (2.1%), expected range [-26392.50, 315355.50]",
+        "salary_in_usd: 283 outlier(s) (1.7%), expected range [-26037.50, 313062.50]"
+      ]
+    },
+    {
+      "name": "Invalid date detection",
+      "status": "fail",
+      "summary": "1 date column(s) with invalid values",
+      "details": [
+        "created_at: column not found"
+      ]
+    },
+    {
+      "name": "Referential integrity",
+      "status": "fail",
+      "summary": "Check crashed: KeyError: 'customer_id'",
+      "details": []
+    },
+    {
+      "name": "Row count comparison",
+      "status": "skip",
+      "summary": "16534 rows. No baseline yet; this run becomes the baseline for next time",
+      "details": []
+    },
+    {
+      "name": "Data freshness",
+      "status": "fail",
+      "summary": "Freshness column not found: created_at",
+      "details": []
+    }
+  ]
+}

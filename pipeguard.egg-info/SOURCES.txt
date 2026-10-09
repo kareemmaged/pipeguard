@@ -1,0 +1,11 @@
+pyproject.toml
+pipeguard/__init__.py
+pipeguard/checks.py
+pipeguard/cli.py
+pipeguard/report.py
+pipeguard.egg-info/PKG-INFO
+pipeguard.egg-info/SOURCES.txt
+pipeguard.egg-info/dependency_links.txt
+pipeguard.egg-info/entry_points.txt
+pipeguard.egg-info/requires.txt
+pipeguard.egg-info/top_level.txt
