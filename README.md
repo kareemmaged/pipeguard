@@ -1,4 +1,4 @@
-![PipeGuard Report](images/report.png)
+![PipeGuard Report](https://ibb.co/gFQbNhRv)
 
 # PipeGuard 🛡️
 
