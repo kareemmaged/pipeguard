@@ -1,4 +1,4 @@
-![PipeGuard Report](https://ibb.co/gFQbNhRv)
+<a href="https://ibb.co/gFQbNhRv"><img src="https://i.ibb.co/zHCWpD48/Screenshot-2026-10-09-192752.png" alt="Screenshot-2026-10-09-192752" border="0"></a>
 
 # PipeGuard 🛡️
 
